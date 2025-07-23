@@ -1,0 +1,29 @@
+BTC/USD Historical Data Download Summary
+==================================================
+Download Date: 2025-07-23 15:43:04
+
+MINUTE DATA:
+  Records: 28001
+  Date Range: 2025-06-30 15:44:00+00:00 to 2025-07-23 15:43:00+00:00
+  Price Range: $105159.73 - $123077.63
+  Average Price: $114212.22
+  File: BTCUSD_minute.csv
+
+DAILY DATA:
+  Records: 90
+  Date Range: 2025-04-24 00:00:00+00:00 to 2025-07-22 00:00:00+00:00
+  Price Range: $93754.84 - $119995.41
+  Average Price: $106254.93
+  File: BTCUSD_daily.csv
+
+USAGE:
+  # Load minute data (if available)
+  import pandas as pd
+  minute_data = pd.read_csv('data/BTCUSD_minute.csv')
+
+  # Load daily data
+  daily_data = pd.read_csv('data/BTCUSD_daily.csv')
+
+  # Convert timestamp column to datetime
+  minute_data['timestamp'] = pd.to_datetime(minute_data['timestamp'])
+  daily_data['timestamp'] = pd.to_datetime(daily_data['timestamp'])
